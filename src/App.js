@@ -1,8 +1,14 @@
+// components
+import Content from "./components/Content";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <div className="App">
-      <h1>React Tutorial</h1>
-      <p>Hello World</p>
+      <Header />
+      <Content />
+      <Footer />
     </div>
   );
 }
