@@ -1,3 +1,13 @@
+:root {
+  --black: #0e141b;
+  --darkgray: #1a2127;
+  --pink: #ff0a78;
+  --lightpink: #ff75b3;
+  --blue: #5773ff;
+  --white: #f2f5f7;
+  --light-gray: #9ca8b4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +17,87 @@
 body {
   line-height: 1.3;
   font-size: 16px;
-  background-color: #1c1c1c;
-  color: whitesmoke;
+  background-color: var(--black);
+  color: var(--white);
   font-family: monospace;
-  margin: 2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  padding: 0 0.25em;
+  background-color: var(--darkgray);
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+footer {
+  width: 100%;
+  padding: 0.25em;
+  background-color: var(--darkgray);
+  color: var(--pink);
+  display: grid;
+  place-content: center;
+}
+
+ul {
+  width: 80%;
+  list-style: none;
+  padding: 0 0.25rem 0.25rem;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+}
+
+.item input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.item input[type="checkbox"]:checked + label {
+  color: var(--light-gray);
+}
+
+.item > label {
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.item svg {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--light-gray);
+}
+
+.item svg:focus,
+.item svg:hover {
+  color: rgb(255, 153, 153);
+  outline: none;
 }
